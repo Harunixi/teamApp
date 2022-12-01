@@ -5,21 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>プラネットキャッツ</title>
     
 </head>
 
 <body>
-    <div class="modal-box closed" id="modal-box"></div>
-        <div class="modal closed" id="modal">
-            <button class="modal__close" id="modal__close">閉じる</button>
-            <div class="modal__guts">
-                <h4>ポップアップウィンドウ</h4>
-                <p>この窓が表示されている間は窓の外の操作はできません。ウィンドウを閉じて操作して下さい。</p>
-            </div>
+    <div class="modal-overlay closed" id="modal-overlay"></div>
+    <div class="modal closed" id="modal">
+      <button class="modal__close-button" id="close-button">✗</button>
+      <div class="modal__guts">
+        <div class="modal__flex">
+            <div class="modal__box">     
+            <p>この窓が表示されている間。</p>
+            <p>この窓が表示されている間は</p>
+            <p>この窓が表示されている間は</p>
+            <p>この窓が表示されている間は</p>
+            <p>この窓が表示されている間は</p>
+            <p>この窓が表示されている間は</p>
+            </div>  
+            <h4>画像</h4>
+           
         </div>
-    <button id="open" class="open">ポップアップ表示</button>
-
+      </div>
+        </div>
+        
+    </div>
+    <button id="open-button" class="open-button">ポップアップ表示</button>
+    <script src="/js/popupwindow.js"></script>
 </body>
 
 </html>
