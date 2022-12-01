@@ -1,15 +1,9 @@
 @charset "utf-8";
-<<<<<<< HEAD
 
-body{
+body {
   background-color: #ccc;
 }
-.modal {
-  display: block;
-  width: 414px;
-  max-width: 100%;
-  height: auto;
-=======
+
 /* index.html */
 
 .modal {
@@ -17,43 +11,47 @@ body{
   width: 600px;
   max-width: 100%;
   height: 300px;
->>>>>>> 6f0325baea0128525094fb959211566a9fb3ce9f
   position: fixed;
   z-index: 100;
   left: 50%;
   top: 50%;
-<<<<<<< HEAD
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   background: #fff;
+
   &__guts {
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: auto;
-  padding: 20px 50px 20px 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 50px 20px 20px;
   }
+
   //✗マークの位置
-  .modal,&__close-button {
+  .modal,
+  &__close-button {
     position: absolute;
     z-index: 1;
-    top:0;
+    top: 0;
     right: 0;
     border: 0;
     background: black;
     color: white;
     padding: 5px 10px;
     font-size: 1.3rem;
-    }
-    &__flex{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-   }
-  .closed {
-    display: none;
   }
-  .modal-overlay {
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.closed {
+  display: none;
+}
+
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -61,10 +59,9 @@ body{
   height: 100%;
   z-index: 50;
   opacity: .9;
-  }
+}
 
-  .open-button {
-=======
+.open-button {
   transform: translate(-50%, -50%);
   /* margin: -200px 0 0 -200px; */
   background: white;
@@ -107,17 +104,17 @@ body{
 }
 
 .open-button {
->>>>>>> 6f0325baea0128525094fb959211566a9fb3ce9f
   border: 0;
   background: lightgreen;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 21px;
-<<<<<<< HEAD
-  }
-=======
 }
 
 /* call.html */
->>>>>>> 6f0325baea0128525094fb959211566a9fb3ce9f
+
+.call {
+  width: 414px;
+  height: 100vh;
+}
