@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 body {
   background-color: #ccc;
 }
 
+=======
+/* index.html */
+>>>>>>> 6f0325baea0128525094fb959211566a9fb3ce9f
 .modal {
   display: block;
   width: 414px;
@@ -60,4 +64,6 @@ body {
   border-radius: 10px;
   font-size: 21px;
 }
+
+/* call.html */
 /*# sourceMappingURL=style.css.map */
