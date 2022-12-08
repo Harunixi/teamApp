@@ -5,33 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>プラネットキャッツ</title>
     
 </head>
 
 <body>
-    <div class="modal-overlay closed" id="modal-overlay"></div>
-    <div class="modal closed" id="modal">
-      <button class="modal__close-button" id="close-button">✗</button>
-      <div class="modal__guts">
-        <div class="modal__flex">
-            <div class="modal__box">     
-            <p>この窓が表示されている間。</p>
-            <p>この窓が表示されている間は</p>
-            <p>この窓が表示されている間は</p>
-            <p>この窓が表示されている間は</p>
-            <p>この窓が表示されている間は</p>
-            <p>この窓が表示されている間は</p>
-            </div>  
-            <h4>画像</h4>
-           
-        </div>
-      </div>
-        </div>
-        
-    </div>
-    <button id="open-button" class="open-button">ポップアップ表示</button>
+  <h1 class="index__select">Select Please…<span class="index__select__span">キャラクターを選択してください</span></h1>
+  <!-- 画像が来るまでどうなるかわからないからクラス名適当
+    後日変更-->
+  <div class="demo">
+    <p class="demo__circle demo__color1"></p>
+    <h2 class="demo__name">マーキュリー<span class="demo__span">MERCURY</span></h2>
+    <p class="demo__circle demo__color2"></p>
+    <h2 class="demo__name">マーズ<span class="demo__span">MARS</span></h2>
+    <p class="demo__circle demo__color3"></p>
+    <h2 class="demo__name">ジュピター<span class="demo__span">JUPITER</span></h2>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- モーダルウィンドウ -->
+  <div class="modal1">
+    <div class="modal__close">&times</div>
+      <h2 class="modal__title">マーキュリー</h2>
+      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+  </div>
+  <div class="modal2">
+    <div class="modal__close">&times</div>
+      <h2 class="modal__title">マーズ</h2>
+      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+  </div>
+  <div class="modal3">
+    <div class="modal__close">&times</div>
+      <h2 class="modal__title">ジュピター</h2>
+      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+  </div>
     <script src="/js/popupwindow.js"></script>
 </body>
 

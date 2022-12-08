@@ -1,69 +1,131 @@
-<<<<<<< HEAD
+@charset "UTF-8";
+@font-face {
+  font-family: "851H-kktt,OSAKA";
+  /* フォーマットごとにパスを指定 */
+  src: url("../fonts/851H-kktt.ttf") format("truetype");
+  src: url("../fonts/Osaka/OSAKA.TTF") format("truetype");
+}
 body {
-  background-color: #ccc;
+  background: url(../images/img_bg.png) no-repeat top left/cover;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #fff;
+  font-family: "851H-kktt", sans-serif;
+  line-height: 1.2;
 }
 
-=======
-/* index.html */
->>>>>>> 6f0325baea0128525094fb959211566a9fb3ce9f
-.modal {
-  display: block;
-  width: 414px;
-  max-width: 100%;
-  height: auto;
-  position: fixed;
-  z-index: 100;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
+.index__select {
+  display: inline-block;
+  font-size: 1.5625rem;
+  margin: 3.84em auto 0;
+  font-weight: 400;
 }
-.modal__guts {
+.index__select__span {
+  font-family: "OSAKA", serif;
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.6666666667em;
+  color: #939393;
+  line-height: 1;
+}
+
+.demo {
+  margin-bottom: 4.5555555556em;
+}
+.demo__circle {
+  display: block;
+  margin: 2.5em auto 0.6666666667em;
+  width: 115px;
+  height: 115px;
+  background: #fff;
+  border-radius: 70px;
+}
+.demo__color1 {
+  border: 3px solid #0C6A72;
+}
+.demo__color2 {
+  border: 3px solid #720C0C;
+}
+.demo__color3 {
+  border: 3px solid #1A3E0A;
+}
+.demo__name {
+  font-size: 1.125rem;
+  font-weight: normal;
+  display: inline-block;
+}
+.demo__span {
+  display: block;
+  font-family: "OSAKA", serif;
+  font-size: 0.625rem;
+  color: #939393;
+  margin-top: 0.4em;
+}
+
+/* modal start -----  */
+.overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  overflow: auto;
-  padding: 20px 50px 20px 20px;
-}
-.modal .modal, .modal__close-button {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-}
-.modal__flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  /* 表示する際の変化の所要時間 */
+  transition: 0.3s;
 }
 
-.closed {
-  display: none;
+/* activeクラスのついたオーバーレイ */
+.overlay.active {
+  /* activeクラスがついたときにオーバーレイを表示する */
+  opacity: 1;
+  visibility: visible;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* モーダルウィンドウ */
+.modal1 {
+  max-width: 500px;
   width: 100%;
   height: 100%;
-  z-index: 50;
-  opacity: 0.9;
+  padding: 15px 20px;
+  background: url(../images/img_bg.png) no-repeat top left/cover;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.modal1__close, .modal1 .modal1 {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
-.open-button {
-  border: 0;
-  background: lightgreen;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 21px;
+/* activeクラス付与 */
+.modal1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* call.html */
+/*    load.html--------   */
+.load {
+  margin-top: 100%;
+}
+.load__title {
+  font-size: 1.5625rem;
+  color: #fff;
+}
+.load__span {
+  font-family: "OSAKA", serif;
+  display: block;
+  font-size: 0.75rem;
+  color: #939393;
+  line-height: 1;
+  margin-top: 1.5em;
+}
 /*# sourceMappingURL=style.css.map */
