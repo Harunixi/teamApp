@@ -42,20 +42,9 @@ body{
   //circle start
   &__toggle{
   display: block;
-  margin: (45em/18) auto (12em/18) ;
-  width:115px;
-  height: 115px;
-  background: #fff;
-  border-radius: 70px;
-}
-&__btn1{
-  border: 3px solid $color-blue;
-}
-&__btn2{
-  border: 3px solid $color-red;
-}
-&__btn3{
-  border: 3px solid $color-green;
+  margin: (45em/18) auto (15em/18) ;
+  width:auto;
+  height: auto;
 }
 //circle end
 //circle-text start
