@@ -13,6 +13,7 @@ $color-text:#fff;
 $color-blue:#0C6A72;
 $color-red:#720C0C;
 $color-green:#1A3E0A;
+$color-btn:#E5B61C;
 body{
   background:url(../images/img_bg.png) no-repeat top left /cover;
   text-align: center;
@@ -36,10 +37,10 @@ body{
     line-height: 1;
   }
 }
-.demo{
+.container{
   margin-bottom:(82em/18) ;
   //circle start
-  &__circle{
+  &__toggle{
   display: block;
   margin: (45em/18) auto (12em/18) ;
   width:115px;
@@ -47,13 +48,13 @@ body{
   background: #fff;
   border-radius: 70px;
 }
-&__color1{
+&__btn1{
   border: 3px solid $color-blue;
 }
-&__color2{
+&__btn2{
   border: 3px solid $color-red;
 }
-&__color3{
+&__btn3{
   border: 3px solid $color-green;
 }
 //circle end
@@ -72,62 +73,103 @@ body{
 }
 //circle-text end
 }
-
-/* modal start -----  */
-.overlay {
+.modal {
+  display: none;
   position: fixed;
-  top: 0;
+  z-index: 99999;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  visibility: hidden;
-  /* 表示する際の変化の所要時間 */
-  transition: .3s;
-}
-
-/* activeクラスのついたオーバーレイ */
-.overlay.active {
-  /* activeクラスがついたときにオーバーレイを表示する */
-  opacity: 1;
-  visibility: visible;
-}
-
-/* モーダルウィンドウ */
-.modal1 {
-  max-width: 500px;
+  top: 0;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 15px 20px;
+  overflow-y: auto;
+  overflow-x:hidden;
   background:url(../images/img_bg.png) no-repeat top left /cover;
-  color: $color-text;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: .2s;
-  //とじる
-  &__close,.modal1{
+&__content {
+    overflow: hidden;
+    padding: (20em/16);
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: show 0.2s linear 0s;
+}
+&__top {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+&__close {
+    color:$color-text;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0 8px;
+}
+&__close:hover, &__close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+&__title {
+  color: #000;
+}
+&__flex{
+  display: flex;
+  align-items: center;
+}
+&__container{
+  margin-top: 25vh;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+}
+
+.popuparea{
+  text-align: left;
+  &__title{
+    font-size:rem(28);
+    color:$color-text;
+    display: inline-block;
+    margin-bottom: (20em/28);
   }
-}
-
-/* activeクラス付与 */
-.modal1.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-
+  &__span{
+    font-family: 'OSAKA',serif;
+    font-size: rem(12);
+    color: $color-span;
+    display: block;
+    margin-bottom: (10em/12);
+  }
+  &__text{
+    font-size: rem(14);
+  }
+  &__btn{
+    color:$color-text;
+    font-size: rem(14);
+    padding:(10em/14)(30em/14);
+    background-color: $color-btn;
+    border-radius: 19px;
+    margin-top: (40em/14);
+  }
+  &__leftbox{
+    width: 50%;
+    margin-right:(20em/14) ;
+  }
+  &__rightbox{
+    width: 10%;
+  }
+  }
 /*    load.html--------   */
 .load{
-  margin-top: 100%;
+  margin-top:50vh;
   &__title{
     font-size: rem(25);
     color: $color-text;

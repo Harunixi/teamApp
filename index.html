@@ -13,34 +13,95 @@
 
 <body>
   <h1 class="index__select">Select Please…<span class="index__select__span">キャラクターを選択してください</span></h1>
-  <!-- 画像が来るまでどうなるかわからないからクラス名適当
-    後日変更-->
-  <div class="demo">
-    <p class="demo__circle demo__color1"></p>
-    <h2 class="demo__name">マーキュリー<span class="demo__span">MERCURY</span></h2>
-    <p class="demo__circle demo__color2"></p>
-    <h2 class="demo__name">マーズ<span class="demo__span">MARS</span></h2>
-    <p class="demo__circle demo__color3"></p>
-    <h2 class="demo__name">ジュピター<span class="demo__span">JUPITER</span></h2>
-  </div>
-  <div class="overlay"></div>
+  
+    <div class="container">
+      <p class="container__toggle container__btn1" data-modal="modalOne"></p>
+      <h2 class="container__name">マーキュリー<span class="container__span">MERCURY</span></h2>
+      <p class="container__toggle container__btn2" data-modal="modalTwo"></p>
+      <h2 class="container__name">マーズ<span class="container__span">MARS</span></h2>
+      <p class="container__toggle container__btn3" data-modal="modalThree"></p>
+      <h2 class="container__name">ジュピター<span class="container__span">JUPITER</span></h2>
+    </div>
+    <div class="overlay"></div>
 
-  <!-- モーダルウィンドウ -->
-  <div class="modal1">
-    <div class="modal__close">&times</div>
-      <h2 class="modal__title">マーキュリー</h2>
-      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
-  </div>
-  <div class="modal2">
-    <div class="modal__close">&times</div>
-      <h2 class="modal__title">マーズ</h2>
-      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
-  </div>
-  <div class="modal3">
-    <div class="modal__close">&times</div>
-      <h2 class="modal__title">ジュピター</h2>
-      <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
-  </div>
+    
+    <!-- modalOne -->
+    <div id="modalOne" class="modal">
+       <div class="modal__content">
+         <div class="modal__top">
+           <span class="modal__close">×</span>
+          </div>
+         <div class="modal__container">
+           <div class="modal__contents popuparea" id="popup">
+            <div class="modal__flex">
+              <div class="popuparea__leftbox">
+                <h2 class="popuparea__title"><span class="popuparea__span">PROFILE No.1</span>マーキュリー</h2>
+                <p class="popuparea__text">
+                プラネットキャット青いろ担当マーキュリーキャット。知りたがりが故に先走ったりするお転婆猫。しかし、やることは全部一生懸命。励ましコールのときは相手の気持ちを摘み取ることが得意なので、利用者は必ず涙する。
+                </p>
+                <button class="popuparea__btn">ヘルプする</button>
+              </div>
+              <div class="popuparea__rightbox">
+                <img src="./images/img_cat1.png" alt="">
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+    </div>
+    <!-- modalOne -->
+    <!-- modalTwo -->
+    <div id="modalTwo" class="modal">
+       <div class="modal__content">
+         <div class="modal__top">
+           <span class="modal__close">×</span>
+          </div>
+          <div class="modal__container">
+            <div class="modal__contents popuparea" id="popup">
+             <div class="modal__flex">
+               <div class="popuparea__leftbox">
+                 <h2 class="popuparea__title"><span class="popuparea__span">PROFILE No.2</span>マーズ</h2>
+                 <p class="popuparea__text">
+                 プラネットキャット青いろ担当マーキュリーキャット。知りたがりが故に先走ったりするお転婆猫。しかし、やることは全部一生懸命。励ましコールのときは相手の気持ちを摘み取ることが得意なので、利用者は必ず涙する。
+                 </p>
+                 <button class="popuparea__btn">ヘルプする</button>
+               </div>
+               <div class="popuparea__rightbox">
+                 <img src="./images/img_cat1.png" alt="">
+               </div>
+             </div>
+           </div>
+          </div>
+       </div>
+    </div>
+    <!-- modalTwo -->
+    <!-- modalThree -->
+    <div id="modalThree" class="modal">
+       <div class="modal__content">
+         <div class="modal__top">
+           <span class="modal__close">×</span>
+          </div>
+          <div class="modal__container">
+            <div class="modal__contents popuparea" id="popup">
+             <div class="modal__flex">
+               <div class="popuparea__leftbox">
+                 <h2 class="popuparea__title"><span class="popuparea__span">PROFILE No.3</span>ジュピター</h2>
+                 <p class="popuparea__text">
+                 プラネットキャット青いろ担当マーキュリーキャット。知りたがりが故に先走ったりするお転婆猫。しかし、やることは全部一生懸命。励ましコールのときは相手の気持ちを摘み取ることが得意なので、利用者は必ず涙する。
+                 </p>
+                 <button class="popuparea__btn">ヘルプする</button>
+               </div>
+               <div class="popuparea__rightbox">
+                 <img src="./images/img_cat1.png" alt="">
+               </div>
+             </div>
+           </div>
+          </div>
+       </div>
+    </div>
+    <!-- modalThree -->
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./js/popupwindow.js"></script>
 </body>
 

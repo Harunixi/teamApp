@@ -29,10 +29,10 @@ body {
   line-height: 1;
 }
 
-.demo {
+.container {
   margin-bottom: 4.5555555556em;
 }
-.demo__circle {
+.container__toggle {
   display: block;
   margin: 2.5em auto 0.6666666667em;
   width: 115px;
@@ -40,21 +40,21 @@ body {
   background: #fff;
   border-radius: 70px;
 }
-.demo__color1 {
+.container__btn1 {
   border: 3px solid #0C6A72;
 }
-.demo__color2 {
+.container__btn2 {
   border: 3px solid #720C0C;
 }
-.demo__color3 {
+.container__btn3 {
   border: 3px solid #1A3E0A;
 }
-.demo__name {
+.container__name {
   font-size: 1.125rem;
   font-weight: normal;
   display: inline-block;
 }
-.demo__span {
+.container__span {
   display: block;
   font-family: "OSAKA", serif;
   font-size: 0.625rem;
@@ -62,59 +62,113 @@ body {
   margin-top: 0.4em;
 }
 
-/* modal start -----  */
-.overlay {
+.modal {
+  display: none;
   position: fixed;
-  top: 0;
+  z-index: 99999;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  visibility: hidden;
-  /* 表示する際の変化の所要時間 */
-  transition: 0.3s;
-}
-
-/* activeクラスのついたオーバーレイ */
-.overlay.active {
-  /* activeクラスがついたときにオーバーレイを表示する */
-  opacity: 1;
-  visibility: visible;
-}
-
-/* モーダルウィンドウ */
-.modal1 {
-  max-width: 500px;
+  top: 0;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 15px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: url(../images/img_bg.png) no-repeat top left/cover;
-  color: #fff;
-  position: fixed;
+}
+.modal__content {
+  overflow: hidden;
+  padding: 1.25em;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.2s;
+  -webkit-animation: show 0.2s linear 0s;
+          animation: show 0.2s linear 0s;
 }
-.modal1__close, .modal1 .modal1 {
+.modal__top {
+  display: inline-block;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  right: 5px;
+  top: 5px;
+}
+.modal__close {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 8px;
+}
+.modal__close:hover, .modal__close:focus {
+  text-decoration: none;
   cursor: pointer;
-  font-size: 20px;
+}
+.modal__title {
+  color: #000;
+}
+.modal__flex {
+  display: flex;
+  align-items: center;
+}
+.modal__container {
+  margin-top: 25vh;
+}
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* activeクラス付与 */
-.modal1.active {
-  opacity: 1;
-  visibility: visible;
+.popuparea {
+  text-align: left;
+}
+.popuparea__title {
+  font-size: 1.75rem;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 0.7142857143em;
+}
+.popuparea__span {
+  font-family: "OSAKA", serif;
+  font-size: 0.75rem;
+  color: #939393;
+  display: block;
+  margin-bottom: 0.8333333333em;
+}
+.popuparea__text {
+  font-size: 0.875rem;
+}
+.popuparea__btn {
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 0.7142857143em 2.1428571429em;
+  background-color: #E5B61C;
+  border-radius: 19px;
+  margin-top: 2.8571428571em;
+}
+.popuparea__leftbox {
+  width: 50%;
+  margin-right: 1.4285714286em;
+}
+.popuparea__rightbox {
+  width: 10%;
 }
 
 /*    load.html--------   */
 .load {
-  margin-top: 100%;
+  margin-top: 50vh;
 }
 .load__title {
   font-size: 1.5625rem;
