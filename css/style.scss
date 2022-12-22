@@ -62,6 +62,15 @@ body{
 }
 //circle-text end
 }
+#modalOne{
+  background:url(../images/img_bg2.png) no-repeat top left /cover;
+}
+#modalTwo{
+  background:url(../images/img_bg3.png) no-repeat top left /cover;
+}
+#modalThree{
+  background:url(../images/img_bg4.png) no-repeat top left /cover;
+}
 .modal {
   display: none;
   position: fixed;
@@ -71,11 +80,8 @@ body{
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
   overflow-x:hidden;
-  background:url(../images/img_bg.png) no-repeat top left /cover;
 &__content {
-    overflow: hidden;
     padding: (20em/16);
     width: 100vw;
     height: 100vh;
@@ -139,8 +145,10 @@ body{
   }
   &__text{
     font-size: rem(14);
+    line-height: 1.2;
   }
   &__btn{
+    position: relative;
     color:$color-text;
     font-size: rem(14);
     padding:(10em/14)(30em/14);
@@ -148,12 +156,15 @@ body{
     border-radius: 19px;
     margin-top: (40em/14);
   }
-  &__leftbox{
+  &__btnImg{
+    position:absolute;
+    top:-50%;
+    left:75%;
     width: 50%;
-    margin-right:(20em/14) ;
   }
-  &__rightbox{
-    width: 10%;
+  &__leftbox{
+    width: 49%;
+    margin-right:(20em/14) ;
   }
   }
 /*    load.html--------   */

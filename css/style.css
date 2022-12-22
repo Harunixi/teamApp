@@ -51,6 +51,18 @@ body {
   margin-top: 0.4em;
 }
 
+#modalOne {
+  background: url(../images/img_bg2.png) no-repeat top left/cover;
+}
+
+#modalTwo {
+  background: url(../images/img_bg3.png) no-repeat top left/cover;
+}
+
+#modalThree {
+  background: url(../images/img_bg4.png) no-repeat top left/cover;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -60,12 +72,9 @@ body {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
   overflow-x: hidden;
-  background: url(../images/img_bg.png) no-repeat top left/cover;
 }
 .modal__content {
-  overflow: hidden;
   padding: 1.25em;
   width: 100vw;
   height: 100vh;
@@ -138,8 +147,10 @@ body {
 }
 .popuparea__text {
   font-size: 0.875rem;
+  line-height: 1.2;
 }
 .popuparea__btn {
+  position: relative;
   color: #fff;
   font-size: 0.875rem;
   padding: 0.7142857143em 2.1428571429em;
@@ -147,12 +158,15 @@ body {
   border-radius: 19px;
   margin-top: 2.8571428571em;
 }
-.popuparea__leftbox {
+.popuparea__btnImg {
+  position: absolute;
+  top: -50%;
+  left: 75%;
   width: 50%;
-  margin-right: 1.4285714286em;
 }
-.popuparea__rightbox {
-  width: 10%;
+.popuparea__leftbox {
+  width: 49%;
+  margin-right: 1.4285714286em;
 }
 
 /*    load.html--------   */
