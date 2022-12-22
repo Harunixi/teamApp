@@ -183,3 +183,39 @@ body{
     margin-top: (18em/12);
   }
 }
+/*    choice.html--------   */
+.choice{
+  &__title{
+  display: inline-block;
+  font-size:rem(25);
+  margin:(96em/25) auto 0;
+  font-weight:400;
+  }
+  &__span{
+    font-family: 'OSAKA',serif;
+    font-size:rem(12);
+    display: block;
+    margin-top: (8em/12);
+    margin-bottom: (80em/12);
+    color:$color-span;
+    line-height: 1;
+  }
+  &__text{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 48px;
+    font-size: rem(12);
+    padding:(12em/12) 0 ;
+    margin-bottom: (30em/12);
+    font-family: 'OSAKA',serif;
+  }
+  &__color{
+    border:2px solid $color-text;
+    color:$color-text;
+  }
+  &__accent{
+    border:2px solid #942424;
+    color:#942424;
+  }
+}

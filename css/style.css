@@ -185,4 +185,39 @@ body {
   line-height: 1;
   margin-top: 1.5em;
 }
+
+/*    choice.html--------   */
+.choice__title {
+  display: inline-block;
+  font-size: 1.5625rem;
+  margin: 3.84em auto 0;
+  font-weight: 400;
+}
+.choice__span {
+  font-family: "OSAKA", serif;
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.6666666667em;
+  margin-bottom: 6.6666666667em;
+  color: #939393;
+  line-height: 1;
+}
+.choice__text {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  border-radius: 48px;
+  font-size: 0.75rem;
+  padding: 1em 0;
+  margin-bottom: 2.5em;
+  font-family: "OSAKA", serif;
+}
+.choice__color {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.choice__accent {
+  border: 2px solid #942424;
+  color: #942424;
+}
 /*# sourceMappingURL=style.css.map */
