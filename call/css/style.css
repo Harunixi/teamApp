@@ -1,108 +1,13 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "851H-kktt,OSAKA";
+  /* フォーマットごとにパスを指定 */
+  src: url("../fonts/851H-kktt.ttf") format("truetype");
+  src: url("../fonts/Osaka/OSAKA.TTF") format("truetype");
+}
 body {
-  background-color: #ccc;
-}
-
-/* index.html */
-.modal {
-  display: block;
-  width: 600px;
-  max-width: 100%;
-  height: 300px;
-  position: fixed;
-  z-index: 100;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-}
-.modal__guts {
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: auto;
-  padding: 20px 50px 20px 20px;
-}
-.modal .modal, .modal__close-button {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-}
-.modal__flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.closed {
-  display: none;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  opacity: 0.9;
-}
-
-.open-button {
-  transform: translate(-50%, -50%);
-  /* margin: -200px 0 0 -200px; */
-  background: white;
-  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-}
-
-.closed {
-  display: none;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.modal-guts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: auto;
-  padding: 20px 50px 20px 20px;
-}
-
-.modal .close-button {
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  right: 20px;
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-}
-
-.open-button {
-  border: 0;
-  background: lightgreen;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 21px;
+  background: url("../images/background.png") center center;
+  font-family: "851H-kktt", sans-serif;
 }
 
 /* call.html */
@@ -113,27 +18,33 @@ body {
   background: url("../images/background.png") center center;
   text-align: center;
 }
+@media screen and (max-width: 414px) {
+  .call {
+    width: 100%;
+  }
+}
 .call__charactor {
-  width: 414px;
-  aspect-ratio: 1/1;
-  background: url("../images/images.png") center center/cover;
+  width: 100%;
+  aspect-ratio: 414/459;
+  overflow: hidden;
+}
+@media screen and (max-width: 414px) {
+  .call__charactor {
+    aspect-ratio: 1/1;
+  }
+}
+.call__charactor img {
+  width: 110%;
 }
 .call__text {
-  margin: autod;
+  margin: 0 auto;
+  transform: translateY(-50%);
 }
 .call__title {
   font-size: 1.375rem;
-  margin-top: 100px;
+  margin-top: 26px;
   margin-bottom: 10px;
   color: #fff;
-}
-.call__title::before {
-  content: "青色担当";
-  font-size: 0.625rem;
-  color: #939393;
-  margin-bottom: 10px;
-  clear: both;
-  display: block;
 }
 .call__time {
   color: #E5B61C;
@@ -144,5 +55,42 @@ body {
   width: 134px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.jupiter::before {
+  content: "緑色担当";
+  font-size: 0.625rem;
+  color: #939393;
+  margin-bottom: 10px;
+  clear: both;
+  display: block;
+}
+
+.mars::before {
+  content: "赤色担当";
+  font-size: 0.625rem;
+  color: #939393;
+  margin-bottom: 10px;
+  clear: both;
+  display: block;
+}
+
+.mercury::before {
+  content: "青色担当";
+  font-size: 0.625rem;
+  color: #939393;
+  margin-bottom: 10px;
+  clear: both;
+  display: block;
+}
+
+.blackhole::before {
+  content: "黒色担当";
+  font-size: 0.625rem;
+  color: #939393;
+  margin-bottom: 10px;
+  clear: both;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
