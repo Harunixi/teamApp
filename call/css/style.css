@@ -33,9 +33,6 @@ body {
     aspect-ratio: 1/1;
   }
 }
-.call__charactor img {
-  width: 110%;
-}
 .call__text {
   margin: 0 auto;
   transform: translateY(-50%);

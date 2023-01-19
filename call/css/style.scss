@@ -39,10 +39,6 @@ body {
     @include sp {
       aspect-ratio: 1/1;
     }
-
-    & img {
-      width: 110%;
-    }
   }
 
   &__text {
